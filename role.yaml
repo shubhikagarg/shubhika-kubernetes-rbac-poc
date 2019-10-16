@@ -1,0 +1,9 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: shubhika-ns
+  name: shubhika-role
+rules:
+  - apiGroups: [""] 
+    resources: ["pods"]
+    verbs: ["delete","get"]
