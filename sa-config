@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Config
+users:
+- name: shubhika-serviceaccount
+  user:
+    token: <replace this with token info>
+clusters:
+- cluster:
+    certificate-authority-data: <replace this with certificate-authority-data info>
+    server: https:10.0.1.128:6443
+  name: self-hosted-cluster
+contexts:
+- context:
+    cluster: self-hosted-cluster
+    user: shubhika-serviceaccount
+  name: shubhika-serviceaccount-context
+current-context:shubhika-serviceaccount-context
